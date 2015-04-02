@@ -1,8 +1,90 @@
-@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+@import url(http://fonts.googleapis.com/css?family=Kameron:400,700);
 
 body, html {
 	width: 100%; 
 	height: 100%; 
 	margin: 0; 
 	padding: 0; 
+	font-family: 'Kameron', Serif; 
 }
+
+header {
+	background-color: 
+}
+
+.header {
+	width: 100%;
+	height: 40px;
+	padding:10px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	background-color: lightgrey;
+	position: fixed; /* sticky nav */ 
+}
+
+.rounded{
+	border-radius: 30px; 
+} 
+
+a:link .logo{
+	color: #1e1e1e;
+	text-decoration: none; 
+}
+
+.no-underline {
+	text-decoration: none; 
+}
+
+.logo {
+	font-family: 'Kameron'; 
+	font-weight: 800; 
+	font-size: 30px;
+	color: #1e1e1e;
+	margin: 0px 30px 5px 15px; 
+	text-decoration: none;
+}
+
+
+/* button styling */
+.round-button {
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
+    border-radius: 50%;
+    border: 1px solid #393939;
+    overflow: hidden;
+    background: #fff;
+
+}
+.round-button:hover {
+    background: #262626;
+}
+.round-button img {
+    display: block;
+    width: 76%;
+    padding: 12%;
+    height: auto;
+}
+
+.round {
+	border-radius: 200px; 
+}
+
+.button-border, .button-border-thin, .button-border-thick {
+  background: none;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 36px; }
+  .button-border:hover, .button-border-thin:hover, .button-border-thick:hover {
+    background-color: rgba(255, 255, 255, 0.9); }
+  .button-border:active, .button-border-thin:active, .button-border-thick:active, .button-border.active, .active.button-border-thin, .active.button-border-thick, .button-border.is-active, .is-active.button-border-thin, .is-active.button-border-thick {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none;
+    -webkit-transition-property: all;
+            transition-property: all;
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s; }
+
+
