@@ -13,6 +13,14 @@ header {
 	box-shadow: 5px;
 }
 
+.wrapper{
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+	height: auto; 
+	width: 100%; 
+}
+
 .header {
 	color: #1e1e1e;
 	width: 100%;
@@ -20,9 +28,10 @@ header {
 	padding: 5px;
 	margin: 0 auto;
 	display: flex;
+	position: fixed;
 	flex-direction: row;
 	justify-content: space-between;
-	position: fixed; /* sticky nav */ 
+
 	-webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.54); /*Box shadow*/ 
 	-moz-box-shadow:    0px 3px 10px 0px rgba(50, 50, 50, 0.54);
 	box-shadow:         0px 3px 10px 0px rgba(50, 50, 50, 0.54); 
@@ -33,12 +42,22 @@ header {
 	text-transform: uppercase;
 }
 
+.publisher {
+	color: #aeaeae;
+}
+
+.category{
+	color: #1e1e1e;
+}
+
 .left{
 	display: flex; 
 }
 
 .center{
 	display: flex; 
+	flex-direction: column; 
+	justify-content: center;
 }
 
 .right{
@@ -60,6 +79,28 @@ header {
 	border-radius: 30px; 
 } 
 
+
+/* text styling */ 
+article{
+	margin: 0 auto; 
+	width: 600px;
+	text-align: justify; 
+}
+
+.author{
+	color: #1e1e1e;
+	text-align: center;
+	font-size: 18px; 
+}
+.center {
+	text-align: center;
+}
+
+h1 {
+	font-size: 48px;
+	margin: 0px 0px 0px 0px;
+}
+
 a:link .logo{
 	color: #1e1e1e;
 	text-decoration: none; 
@@ -76,6 +117,15 @@ a:link .logo{
 	color: #1e1e1e;
 	margin: 0px 30px 0px 15px; 
 	text-decoration: none;
+}
+
+/* img styling */ 
+.featured {
+	width: 100%;  
+	height: auto;  
+	margin: 0 auto; 
+	padding: 0; 
+	display: block; 
 }
 
 
