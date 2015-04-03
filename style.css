@@ -83,7 +83,7 @@ header {
 /* text styling */ 
 article{
 	margin: 0 auto; 
-	width: 600px;
+	width: 900px;
 	text-align: justify; 
 }
 
@@ -92,13 +92,28 @@ article{
 	text-align: center;
 	font-size: 18px; 
 }
+
 .center {
 	text-align: center;
+}
+
+p {
+	font-size: 18px; 
 }
 
 h1 {
 	font-size: 48px;
 	margin: 0px 0px 0px 0px;
+}
+
+.note {
+	border-left: 3px solid black; 
+	padding: 0px 0px 0px 10px; 
+	margin: 0; 
+	font-family: Serif;
+	font-size: 22px; 
+	font-style: italic;
+
 }
 
 a:link .logo{
@@ -171,4 +186,42 @@ a:link .logo{
             transition-duration: .3s; 
 }
 
+/*code snippets */ 
+.code {
+	padding: 30px; 
+	background-color: #eee; 
+	font-family: monospace; 
+	color: #1e1e1e; 
+	line-height: 1.8em; 
+	font-size: 20px; 
+	word-wrap: normal; 
+}
 
+footer {
+	width: 900px; 
+	height: auto; 
+	margin: 0 auto; 
+	display: flex; 
+	flex-direction: space-between;
+}
+
+.follow {
+	width: 425px; 
+	height: auto; 
+	display: flex; 
+	flex-direction: space-between;
+	background-color: #ffffff;
+}
+
+.display {
+	width: 120px; 
+	height: auto; 
+	background-color: #1e1e1e; 
+}
+
+.button-follow {
+	border-color: green; 
+	color: green; 
+	border-radius: 50px; 
+	width: auto; 
+}

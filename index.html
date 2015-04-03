@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- <link rel="stylesheet" type="text/css" href="normalize.css"> -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="~/font-awesome/css/font-awesome.min.css">
@@ -30,8 +32,69 @@
 
 		<article>
 			<h1 class="center">React Components</h1>
-			<i class="author center">Vlad the Impaler</i>	
+			<i class="author center">Vlad the Impaler</i>
+
+			<p>Components are the smallest, yet most fundamental part of React. They’re similar, in concepts, to things like widgets and modules. React defines itself as a library for building user interfaces. As such, when you think of a user interface you want to build (with React), you need to think of it in terms of the smallest possible components that you can define.
+
+			These components include code which defines how DOM elements are created and how users can interact with them. Components can be defined purely in JavaScript or they can be defined in a superset (or extended variation) of JavaScript called JSX. If you decide to use JSX for your component definitions, you may also need a compiler application, but we’ll get to that in a minute.</p>
+			
+			<div class="note">	
+				<p>We’re going to be referring to pure JavaScript as JS and the React version of JavaScript as JSX.</p>
+				
+				<p>You can find the accompanying source-code, for this tutorial, at: https://github.com/formativ/tutorial-react-components.</p>
+				<p>Please post any errors you find, or questions you have as comments on this article or as issues on GitHub.</p>
+				Thanks to Pete Hunt for helping to improve this!</p>
+			</div>
+
+			<h1>Embedded HTML</h1>
+			<p>
+				If you’ve been developing websites for a while, you may have flinched when I spoke about using HTML within your JavaScript. For the longest time, a development paradigm has existed which says that you should split HTML and JavaScript. Words like unobtrusive have been repurposed to express this kind of separation. That is exactly how I felt, until I started working with React.
+
+				The reason this paradigm exists is to decrease coupling (how much things depend on each other) and increase cohesion (how well different things work together). So we have created an environment in which we try our best to make HTML (and templates) as free of logic as possible. We then need to attach behaviour to this in the form of external scripts.
+
+				There are trade-offs with this approach to doing things. For starters, it takes more effort trying to keep these two things separate. There are many template engines and languages. There are also many template parsers to handle them all. And yet these languages (with the exception of HTML) still seem to include a modicum of logical operations…
+
+				Additionally, when we need to modify the contents of a web page, via JavaScript, we have to know about HTML and/or templates. How else can we know what to display and where to display it? We could load external templates, via additional HTTP requests, but how would we know where to put it without some knowledge of the DOM? We could load templates embedded within special script tags, but we would first need to fetch the contents of those script tags.
+
+				This brings us to the biggest problem with the separation of HTML and JavaScript: The only way we can get elements to attach behaviour to, and read data from, is by knowing about HTML elements in the document. Libraries like jQuery are built around the idea that HTML elements are only a CSS selector away from JavaScript.
+			</p>			
+
+			<div class="code">
+				
+								var HelloWorld = React.createClass({ <br/>
+				  render : function() {<br/>
+				    return React.DOM.div({<br/>
+				      children : [<br/>
+				        React.DOM.span({<br/>
+				          children : "hello"<br/>
+				        }),<br/>
+				        React.DOM.span({<br/>
+				          children : " world!"<br/>
+				        })<br/>
+				      ]<br/>
+				    });<br/>
+				  }<br/>
+				});<br/>
+
+				React.renderComponent(<br/>
+				  HelloWorld({}),<br/>
+				  document.body<br/>
+				);<br/>
+			</div>	
 		</article>
+
+		<footer>
+			<div class="follow"> 
+				<div class="search">Recommend</div>
+			</div>
+
+			<div class="follow"> 
+				<div class="display"></div>
+				<div>Description desc desc desc desc desc desc desc </div>
+				<div class="search">Follow</div>
+			</div>
+
+		</footer>
 
 
 	</div><!-- /wrapper -->
